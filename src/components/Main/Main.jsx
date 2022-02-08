@@ -27,36 +27,38 @@ const Main = () => {
     }
 
     return (
-        <main className="container">
-            <h1 className="title">Buscador de CEP</h1>
+        <div className='body'>
+            <main className="container">
+                <h1 className="title">Buscador de CEP</h1>
 
-            <section className="containerInput">
-                <input
-                    type="text"
-                    placeholder="Digite o CEP"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                />
-
-                <button className="buttonSearch" onClick={handleSearch}>
-                    <FiSearch 
-                        size={25}
-                        color="#fff"
+                <section className="containerInput">
+                    <input
+                        type="text"
+                        placeholder="Digite o CEP"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
                     />
-                </button>
-            </section>
 
-            {Object.keys(cep).length > 0 && (
-                <section className="main">
-                    <h2>{cep.cep}</h2>
-                    <span>{cep.logradouro}</span>
-                    <span>{cep.complemento}</span>
-                    <span>{cep.bairro}</span>
-                    <span>{cep.localidade} - {cep.uf}</span>
+                    <button className="buttonSearch" onClick={handleSearch}>
+                        <FiSearch 
+                            size={25}
+                            color="#fff"
+                        />
+                    </button>
                 </section>
-            )}
-            
-        </main>
+
+                {Object.keys(cep).length > 0 && (
+                    <section className="main">
+                        <h2>{cep.cep}</h2>
+                        <span>{cep.logradouro}</span>
+                        <span>{cep.complemento}</span>
+                        <span>{cep.bairro}</span>
+                        <span>{cep.localidade} - {cep.uf}</span>
+                    </section>
+                )}
+                
+            </main>
+        </div>
     )
 }
 
