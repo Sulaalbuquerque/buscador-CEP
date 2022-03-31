@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
 
-    background-image: url('../../assets/background.jpg');
+    background-image: url('../../assets/background.webp');
     background-position: top;
     height: 100vh;
 }
